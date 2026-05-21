@@ -14,14 +14,55 @@
       background: #f5f3ff;
       color: #1e1b4b;
       box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
     }
-    h1   { font-size: 2rem; color: #4c1d95; }
-    h2   { color: #4c1d95; }
+    h1   { font-size: 2rem; color: #4c1d95; transition: color 0.3s; }
+    h2   { color: #4c1d95; transition: color 0.3s; }
     p    { color: #4b5563; line-height: 1.6; }
     ul   { color: #4b5563; line-height: 2; }
     a    { color: #7c3aed; text-decoration: none; }
     a:hover { text-decoration: underline; }
     img  { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 16px; }
+
+    /* Dark mode styles */
+    body.dark {
+      background: #0f0a1e;
+      color: #e2d9f3;
+    }
+    body.dark h1 { color: #c4b5fd; }
+    body.dark h2 { color: #c4b5fd; }
+    body.dark p  { color: #c4b5fd; }
+    body.dark ul { color: #c4b5fd; }
+    body.dark a  { color: #a78bfa; }
+    body.dark .project-card {
+      background: #1e1040;
+      border-color: #4c1d95;
+    }
+
+    /* Toggle button */
+    .toggle-btn {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: #7c3aed;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+    }
+
+    .project-card {
+      border: 1px solid #ddd6fe;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      background: #faf5ff;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
     @media (max-width: 600px) {
       body { margin: 30px auto; padding: 0 16px; }
       h1   { font-size: 1.5rem; }
@@ -29,30 +70,12 @@
   </style>
 </head>
 <body>
+
+  <button class="toggle-btn" onclick="toggleDark()">🌙 Dark mode</button>
+
   <img src="photo jpg.jpeg" alt="A photo of Kachy">
   <h1>Hi, I'm Kachy 👋</h1>
   <p>I'm Kachy — a tech enthusiast who codes by day and learns by night. I believe anyone can build things with the right curiosity and persistence. This is my corner of the web.</p>
 
   <h2>My interests</h2>
   <ul>
-    <li>Coding</li>
-    <li>Music</li>
-    <li>Football</li>
-  </ul>
-
-  <h2>What I'm learning</h2>
-  <ul>
-    <li>HTML & CSS</li>
-    <li>Git & GitHub</li>
-    <li>How to build websites</li>
-  </ul>
-<h2>My projects</h2>
-
-  <div style="border: 1px solid #ddd6fe; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; background: #faf5ff;">
-    <p style="font-weight: 600; color: #4c1d95; margin: 0 0 6px;">🛒 Wholesale Product</p>
-    <p style="margin: 0 0 10px; color: #4b5563; font-size: 14px;">A platform connecting customers to sellers who offer products in wholesale quantities — making bulk buying easier and more accessible.</p>
-    <a href="https://wholesalersproduct.com" target="_blank" style="font-size: 13px; color: #7c3aed;">🔗 wholesalersproduct.com</a>
-  </div>
-  <p>Find me on <a href="https://github.com/onyekachicallistus043-web" target="_blank">GitHub</a></p>
-</body>
-</html>
