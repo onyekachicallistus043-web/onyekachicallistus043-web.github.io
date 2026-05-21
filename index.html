@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kachy</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -12,6 +13,7 @@
       padding: 0 20px;
       background: #f5f3ff;
       color: #1e1b4b;
+      box-sizing: border-box;
     }
     h1   { font-size: 2rem; color: #4c1d95; }
     h2   { color: #4c1d95; }
@@ -19,10 +21,15 @@
     ul   { color: #4b5563; line-height: 2; }
     a    { color: #7c3aed; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    img  { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 16px; }
+    @media (max-width: 600px) {
+      body { margin: 30px auto; padding: 0 16px; }
+      h1   { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-  <img src="photo jpg.jpeg" alt="A photo of Kachy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; display: block; margin-bottom: 16px;">
+  <img src="photo jpg.jpeg" alt="A photo of Kachy">
   <h1>Hi, I'm Kachy 👋</h1>
   <p>I'm Kachy — a tech enthusiast who codes by day and learns by night. I believe anyone can build things with the right curiosity and persistence. This is my corner of the web.</p>
 
@@ -32,12 +39,14 @@
     <li>Music</li>
     <li>Football</li>
   </ul>
-<h2>What I'm learning</h2>
+
+  <h2>What I'm learning</h2>
   <ul>
     <li>HTML & CSS</li>
     <li>Git & GitHub</li>
     <li>How to build websites</li>
   </ul>
+
   <p>Find me on <a href="https://github.com/onyekachicallistus043-web" target="_blank">GitHub</a></p>
 </body>
 </html>
